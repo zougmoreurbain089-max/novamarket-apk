@@ -1,0 +1,21 @@
+{
+  "name": "novamarket-apk",
+  "version": "1.0.0",
+  "description": "NovaMarket — application Android",
+  "main": "index.js",
+  "scripts": {
+    "sync": "cap sync android",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ZOUGMORE Urbain",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/android": "^8.4.2",
+    "@capacitor/cli": "^8.4.2",
+    "@capacitor/core": "^8.4.2"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5"
+  }
+}

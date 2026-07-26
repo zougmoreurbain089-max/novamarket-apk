@@ -1,0 +1,42 @@
+NOVAMARKET — CRÉATION DU FICHIER APK ANDROID
+================================================
+
+Ce dossier contient un projet Capacitor qui enveloppe NovaMarket dans une
+vraie application Android installable (.apk), comme sur le Play Store.
+
+MÉTHODE : GitHub Actions (comme pour le .exe de Nova_GestionVente)
+--------------------------------------------------------------------
+1. Crée un nouveau dépôt GitHub, par exemple "novamarket-apk"
+2. Dans un terminal, à l'intérieur de ce dossier :
+
+   git init
+   git add .
+   git commit -m "Ajout du projet NovaMarket APK"
+   git branch -M main
+   git remote add origin https://github.com/TON-COMPTE/novamarket-apk.git
+   git push -u origin main
+
+   (utilise un token avec les droits "repo" + "workflow", comme la dernière fois)
+
+3. Va dans l'onglet "Actions" du dépôt sur GitHub.com
+4. Une exécution "Build Android APK" démarre automatiquement (3-6 minutes,
+   un peu plus long que le .exe car ça installe le SDK Android)
+5. Une fois le ✅ vert obtenu, descends en bas de la page → section
+   "Artifacts" → télécharge "NovaMarket-Android"
+6. Dedans se trouve app-debug.apk — c'est le fichier à distribuer.
+
+IMPORTANT — INSTALLATION SUR UN TÉLÉPHONE
+--------------------------------------------------------------------
+Comme ce n'est pas publié sur le Play Store, Android va afficher un
+avertissement "Source inconnue" à l'installation — c'est normal pour
+toute app installée hors Play Store. La personne doit juste appuyer sur
+"Installer quand même" / "Autoriser cette source".
+
+Ce fichier .apk est copiable sur clé USB, envoyable par WhatsApp, etc.
+
+NOTE SUR LA VERSION "DEBUG"
+--------------------------------------------------------------------
+Ce workflow génère une version "debug" (non signée pour le Play Store),
+suffisante pour installer et tester sur n'importe quel téléphone Android.
+Pour publier un jour sur le Play Store, il faudra une version "release"
+signée avec une clé — étape différente, à faire plus tard si besoin.
